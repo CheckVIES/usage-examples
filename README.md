@@ -9,6 +9,7 @@ CheckVIES is a service for validating VAT numbers via the VIES (VAT Information 
 Examples are organized by technology and programming language:
 
 * [csharp-netcore](./csharp-netcore) — Example using .NET 10 (C#) with a Background Service (Worker Service).
+* [typescript](./typescript-nodejs) — Example using Node.js (TypeScript) with a simple console script.
 
 ## How to Use
 
