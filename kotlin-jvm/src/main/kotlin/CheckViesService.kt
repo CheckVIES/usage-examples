@@ -45,9 +45,14 @@ class CheckViesService(config: AppConfig) {
                 .getOrNull()
 
             if (result != null && (result.state == RequestStateDto.Pending || result.state == RequestStateDto.TemporaryError)) {
+                if (result.state == RequestStateDto.TemporaryError && result.errorCode != null)
+                    println(" - errorCode=${result.errorCode}")
+
                 // avoid too frequent requests
                 delay(1.seconds)
                 continue
+            } else if (result != null && result.state == RequestStateDto.Error) {
+                println("Check finished with error, error code: ${result.errorCode}")
             }
             break
         }
