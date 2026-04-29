@@ -49,6 +49,7 @@ class CheckViesService(config: AppConfig) {
                 delay(1.seconds)
                 continue
             }
+            break
         }
     }
 
